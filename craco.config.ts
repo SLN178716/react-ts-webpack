@@ -2,10 +2,15 @@ import path from 'path';
 import { name } from './package.json';
 import cracoLess from 'craco-less';
 
-const pathResolve = (pathUrl: string) => path.join(__dirname, pathUrl);
+const pathResolve = (pathUrl: string) => path.resolve(__dirname, pathUrl);
 
 module.exports = {
   reactScriptsVersion: 'react-scripts' /* (default value) */,
+  entry: pathResolve('src/index.tsx'), // 打包入口
+  output: {
+    filename: 'bundle.js',
+    path: pathResolve('dist')
+  },
   plugins: [
     {
       plugin: cracoLess,

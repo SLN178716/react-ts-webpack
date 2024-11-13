@@ -1,7 +1,10 @@
 {
   // "extends": "../tsconfig.json",                      /* 继承某个配置文件 */
   "include": [
-    "src"
+    "src",
+    "types",
+    "./*.ts",
+    "package.json"
   ],                                                     /* 指定哪些文件需要编译 */
   // "exclude": [],                                      /* 指定哪些文件不需要编译 */
   // "files": [],                                        /* 编译指定的文件 */
@@ -49,7 +52,9 @@
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
     "types": [                                           /* Specify type package names to be included without being referenced in a source file. */
-      "jest"  // 测试运行器的名称
+      "jest", // 测试运行器的名称
+      "node",
+      "craco-less"
     ],                                      
     // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
     // "moduleSuffixes": [],                             /* List of file name suffixes to search when resolving a module. */
